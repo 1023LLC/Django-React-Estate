@@ -137,6 +137,12 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 3
 }
 
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+FILE_UPLOAD_PERMISSIONS = 0o640
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
