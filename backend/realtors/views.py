@@ -5,7 +5,7 @@ from .serializers import RealtorSerializer
 
 
 
-class RealtorListview(ListAPIView):
+class RealtorListView(ListAPIView):
     permission_classes = (permissions.AllowAny, )
     queryset = Realtor.objects.all()
     serializer_class = RealtorSerializer
