@@ -10,7 +10,7 @@ from datetime import datetime, timezone, timedelta
 
 class ListingsView(ListAPIView):
     queryset = Listing.objects.order_by('-list_date').filter(is_published=True)
-    permisssions_classes = (permissions.AllowAny, )
+    permission_classes = (permissions.AllowAny, )
     serializer_class = ListingSerializer
     lookup_field = 'slug'
     
@@ -150,45 +150,45 @@ class SearchView(APIView):
             
         for query in queryset:
             count = 0
-            if queryset.photo_1:
+            if query.photo_1:
                 count += 1
-            if queryset.photo_2:
+            if query.photo_2:
                 count += 1
-            if queryset.photo_3:
+            if query.photo_3:
                 count += 1
-            if queryset.photo_4:
+            if query.photo_4:
                 count += 1
-            if queryset.photo_5:
+            if query.photo_5:
                 count += 1
-            if queryset.photo_6:
+            if query.photo_6:
                 count += 1
-            if queryset.photo_7:
+            if query.photo_7:
                 count += 1
-            if queryset.photo_8:
+            if query.photo_8:
                 count += 1
-            if queryset.photo_9:
+            if query.photo_9:
                 count += 1
-            if queryset.photo_0:
+            if query.photo_10:
                 count += 1
-            if queryset.photo_11:
+            if query.photo_11:
                 count += 1
-            if queryset.photo_12:
+            if query.photo_12:
                 count += 1
-            if queryset.photo_13:
+            if query.photo_13:
                 count += 1
-            if queryset.photo_14:
+            if query.photo_14:
                 count += 1
-            if queryset.photo_15:
+            if query.photo_15:
                 count += 1
-            if queryset.photo_16:
+            if query.photo_16:
                 count += 1
-            if queryset.photo_17:
+            if query.photo_17:
                 count += 1
-            if queryset.photo_18:
+            if query.photo_18:
                 count += 1
-            if queryset.photo_19:
+            if query.photo_19:
                 count += 1
-            if queryset.photo_20:
+            if query.photo_20:
                 count += 1
                 
             if count < has_photos:
