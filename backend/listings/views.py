@@ -15,10 +15,10 @@ class ListingsView(ListAPIView):
     lookup_field = 'slug'
     
     
-    class ListingVIew(RetrieveAPIView):
-        queryset = Listing.objects.order_by('-list_date').filter(is_published=True)
-        serializer_class = ListingDetailSerializer
-        lookup_field = 'slug'
+class ListingView(RetrieveAPIView):
+    queryset = Listing.objects.order_by('-list_date').filter(is_published=True)
+    serializer_class = ListingDetailSerializer
+    lookup_field = 'slug'
         
         
 class SearchView(APIView):
